@@ -2,7 +2,6 @@ package com.knoldus.learning.java.services;
 
 import com.knoldus.learning.java.entity.Employee;
 import com.knoldus.learning.java.repo.EmployeeRepository;
-import java.util.Collections;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -19,7 +19,6 @@ public class Employee {
     @NotNull
     private String name;
 
-   // @NotNull( message = "should be only mobile Number")
     private String contact;
     private String department;
     private double salary;

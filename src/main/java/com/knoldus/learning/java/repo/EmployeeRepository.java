@@ -7,7 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface EmployeeRepository extends CrudRepository<Employee, String> {
 
-
     List<Employee>findById(Long Id);
     Optional<Employee>findByName(String name);
 }

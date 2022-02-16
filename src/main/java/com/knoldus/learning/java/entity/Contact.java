@@ -1,5 +1,8 @@
 package com.knoldus.learning.java.entity;
 
+/**
+ *
+ */
 public class Contact {
     private String mobile;
     private String email;
