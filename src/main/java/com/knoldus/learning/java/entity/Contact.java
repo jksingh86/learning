@@ -1,32 +1,20 @@
 package com.knoldus.learning.java.entity;
 
-/**
- *
- */
+import javax.persistence.*;
+
+@Entity
+@Table(name = "contact")
 public class Contact {
-    private String mobile;
-    private String email;
 
-    public String getMobile() {
-        return mobile;
-    }
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
+    @Column(nullable = false, unique = true, length = 10)
+    private Long number;
 
-    public String getEmail() {
-        return email;
-    }
+    @Column(nullable = false, unique = true, length = 10)
+    private Long email;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Contact(String mobile, String email) {
-        super();
-        this.mobile = mobile;
-        this.email = email;
-
-    }
 }

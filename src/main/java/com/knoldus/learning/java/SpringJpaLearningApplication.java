@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringJpaLearningApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(SpringJpaLearningApplication.class, args);
-		System.out.println("Hi KRISHNA");
+		System.out.println("Hello KRISHNA");
 	}
+
 }

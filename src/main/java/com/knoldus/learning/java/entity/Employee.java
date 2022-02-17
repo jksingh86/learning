@@ -1,28 +1,156 @@
 package com.knoldus.learning.java.entity;
 
-import com.sun.istack.NotNull;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity(name = "employee")
+@Entity
 @Table(name = "employee")
 public class Employee {
+
+//    @Id
+//    @Column
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private int id;
+//    @Column(nullable = false, length = 16)
+//    private String name;
+//    @Column(nullable = false, length = 10)
+//    private Contact contact;
+//    @Column(nullable = false, length = 16)
+//    private String departmentType;
+//    @Column(nullable = false, length = 16)
+//    private Long salary;
+//    @Column(nullable = false, length = 12)
+//    private String type;
+//    @Column(nullable = false, length = 12)
+//    private Address address;
+//
+//    public Employee() {
+//    }
+//
+//    public Employee(int id, String name, Contact contact, String departmentType, Long salary, String type, Address address) {
+//        this.id = id;
+//        this.name = name;
+//        this.contact = contact;
+//        this.departmentType = departmentType;
+//        this.salary = salary;
+//        this.type = type;
+//        this.address = address;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", contact=" + contact +
+//                ", departmentType='" + departmentType + '\'' +
+//                ", salary=" + salary +
+//                ", type='" + type + '\'' +
+//                ", address=" + address +
+//                '}';
+//    }
+//
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public Contact getContact() {
+//        return contact;
+//    }
+//
+//    public void setContact(Contact contact) {
+//        this.contact = contact;
+//    }
+//
+//    public String getDepartmentType() {
+//        return departmentType;
+//    }
+//
+//    public void setDepartmentType(String departmentType) {
+//        this.departmentType = departmentType;
+//    }
+//
+//    public Long getSalary() {
+//        return salary;
+//    }
+//
+//    public void setSalary(Long salary) {
+//        this.salary = salary;
+//    }
+//
+//    public String getType() {
+//        return type;
+//    }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
+//
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
-
-    @NotNull
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(nullable = false, length = 16)
     private String name;
-
+    @Column(nullable = false, length = 10)
     private String contact;
-    private String department;
-    private double salary;
-    private String empType;
+    @Column(nullable = false, length = 16)
+    private String departmentType;
+    @Column(nullable = false, length = 16)
+    private Long salary;
+    @Column(nullable = false, length = 12)
+    private String type;
+
+    public Employee() {
+    }
+
+    public Employee(int id, String name, String contact, String departmentType, Long salary, String type) {
+        this.id = id;
+        this.name = name;
+        this.contact = contact;
+        this.departmentType = departmentType;
+        this.salary = salary;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", contact='" + contact + '\'' +
+                ", departmentType='" + departmentType + '\'' +
+                ", salary=" + salary +
+                ", type='" + type + '\'' +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -40,27 +168,27 @@ public class Employee {
         this.contact = contact;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getDepartmentType() {
+        return departmentType;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setDepartmentType(String departmentType) {
+        this.departmentType = departmentType;
     }
 
-    public double getSalary() {
+    public Long getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Long salary) {
         this.salary = salary;
     }
 
-    public String getEmpType() {
-        return empType;
+    public String getType() {
+        return type;
     }
 
-    public void setEmpType(String empType) {
-        this.empType = empType;
+    public void setType(String type) {
+        this.type = type;
     }
 }
