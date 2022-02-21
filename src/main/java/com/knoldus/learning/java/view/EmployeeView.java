@@ -1,27 +1,34 @@
 package com.knoldus.learning.java.view;
 
-import com.knoldus.learning.java.entity.Contact;
+import lombok.AllArgsConstructor;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeView {
 
     private int id;
 
     private String name;
 
-    private Contact contact;
-
     private String departmentType;
 
-    private Long salary;
+    private int salary;
 
     private String type;
 
-    private Long number;
+    private List<Integer> number;
 
-    private Long email;
+    private List<String> email;
 
-    private String address;
+    private List<String> address;
 
-    private String pinCode;
+    private List<Integer> pinCode;
 
 }
